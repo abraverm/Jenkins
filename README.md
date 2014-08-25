@@ -20,13 +20,13 @@ __Note__ "PORT" is the mapped port , from Docker host to container's exposed por
 
 1. Jenkins master
 
-        docker run -d -P -v /path/on/host/jenkins:/shared abraverm/jenkins
+        docker run -d -P -v /path/on/host/jenkins:/shared abraverm/jenkins:master
     * access from browser to localhost:PORT
     * Jenkins files (inside the contanier) will be accessible from host in /path/on/host
 
 2. Jenkins node
 
-        docker run -d -P abraverm/jenkins_node
+        docker run -d -P abraverm/jenkins:node
         ssh root@localhost -p PORT
 		    password: 123456
 
@@ -46,7 +46,7 @@ How to use Jenkins with Docker
 
     3. 'Add image'
 
-        * ID : abraverm/jenkins_node
+        * ID : abraverm/jenkins:node
         * Labels : something2
         * Credentials: Add
             - Kind: SSH Username with private key

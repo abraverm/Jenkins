@@ -23,4 +23,4 @@ Options:
 
     Docker command :
 
-        docker run -d -P -v /path/on/host:/shared abraverm/jenkins
+        docker run -d -P -v /path/on/host:/shared abraverm/jenkins:master
