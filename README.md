@@ -47,6 +47,7 @@ How to use Jenkins with Docker
 
     3. 'Add image'
 
+      a. Simple node
         * ID : abraverm/jenkins:node
         * Labels : something2
         * Credentials: Add
@@ -57,3 +58,16 @@ How to use Jenkins with Docker
         * Remote Filing System Root: /root
         * Advanced
             - Volumes: /path/on/host/jenkins/ssh/id_rsa.pub:/root/.ssh/authorized_keys
+
+      b. Nested docker node - running docker from inside a docker node
+        * ID : abraverm/jenkins:docker
+        * Labels : something3
+        * Credentials : same as simple node or:
+            - Kind: SSH Username with password
+            - Scope: Global
+            - Username: root
+            - Password: 123456
+        * Remote Filing System Root: /root
+        * Advanced:
+            - Volumes: /var/run/docker.sock:/var/run/docker.sock
+            - Run container privileged: true
