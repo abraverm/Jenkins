@@ -15,4 +15,4 @@ if [ -e "/init" ]; then
 	fi
 	rm -rf /init
 fi
-/usr/bin/java $JENKINS_JAVA_OPTIONS -DJENKINS_HOME=$JENKINS_HOME -jar /usr/lib/jenkins/jenkins.war
+/bin/java $JENKINS_JAVA_OPTIONS -DJENKINS_HOME=$JENKINS_HOME -jar /usr/lib/jenkins/jenkins.war

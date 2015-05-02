@@ -1,5 +1,5 @@
 FROM fedora
-RUN yum install -y -q wget openssh-server openssh-client java-1.7.0-openjdk git
+RUN yum install -y -q wget openssh-server openssh-client java-1.8.0-openjdk git
 # configure ssh
 RUN mkdir /root/.ssh
 RUN chmod 700 /root/.ssh
